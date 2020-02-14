@@ -128,4 +128,6 @@ test -r /home/*/.opam/opam-init/init.zsh && . /home/*/.opam/opam-init/init.zsh >
 export GOROOT=/home/*/go
 export GOPATH=/home/*/gopath
 PATH='/home/*/go/bin':"$PATH"; export PATH
+
+# Rust
 PATH='/home/*/.cargo/bin':"$PATH"; export PATH
