@@ -9,12 +9,12 @@ bindkey -e
 export HISTSIZE=10000
 
 PS1='%K{black}%F{cyan}%D{%F %A} %t%f%k
-%K{black}%F{cyan}%B☯%~☯%b%f%k '
+%K{black}%F{blue}%B☯%~☯%b%f%k '
 
 #PROMPT="%D{%F %A} %t
 #☯%~☯ "
 
-export LS_COLORS=$LS_COLORS'di=1;36:ex=1;35'
+export LS_COLORS=$LS_COLORS'di=1;94;40;4:ex=1;36;1'
 
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias ll='ls -lh --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
@@ -37,10 +37,10 @@ alias chm='chmod 755'
 alias chmr='chmod 755 -R'
 alias suchm='sudo chmod 755'
 alias suchmr='sudo chmod 755 -R'
-alias cho='chown ic_hacker'
-alias chor='chown ic_hacker -R'
-alias sucho='sudo chown ic_hacker'
-alias suchor='sudo chown ic_hacker -R'
+alias cho='chown alozo'
+alias chor='chown -R alozo'
+alias sucho='sudo chown alozo'
+alias suchor='sudo chown -R alozo'
 alias gztar='tar zvxf'
 alias bztar='tar jvxf'
 alias cdtop='cd ..'
@@ -65,19 +65,19 @@ alias suemsnw='sudo emacs -nw'
 alias emsbatch='emacs -batch -f batch-byte-compile'
 alias emsnw='emacs -nw'
 
-alias cl99='clang -std=c99 -Wall -Os'
-alias cl11='clang -std=c11 -Wall -Os'
+alias cl99='clang -std=c99 -Wextra -Wall -Os'
+alias cl11='clang -std=c11 -Wextra -Wall -Os'
 
-alias cp11='clang++ -std=c++11 -Wall -Os'
-alias cp14='clang++ -std=c++14 -Wall -Os'
-alias cp17='clang++ -std=c++17 -Wall -Os'
+alias cp11='clang++ -std=c++11 -Wextra -Wall -Os'
+alias cp14='clang++ -std=c++14 -Wextra -Wall -Os'
+alias cp17='clang++ -std=c++17 -Wextra -Wall -Os'
 
 alias gc99='gcc -std=c99 -Wall -Wextra -Os'
 alias gc11='gcc -std=c11 -Wall -Wextra -Os'
 
-alias gp11='g++ -std=c++11 -Wall -Os'
-alias gp14='g++ -std=c++14 -Wall -Os'
-alias gp17='g++ -std=c++17 -Wall -Os'
+alias gp11='g++ -std=c++11 -Wextra -Wall -Os'
+alias gp14='g++ -std=c++14 -Wextra -Wall -Os'
+alias gp17='g++ -std=c++17 -Wextra -Wall -Os'
 
 alias g3compile='gcc `pkg-config --cflags gtk+-3.0 --libs gtk+-3.0` -Wall -Wextra -Os'
 alias c3compile='clang `pkg-config --cflags gtk+-3.0 --libs gtk+-3.0` -Wall -Os'
@@ -85,6 +85,7 @@ alias gp3compile='g++ `pkg-config gtkmm-3.0 --cflags --libs`'
 alias gcglfw='gcc -std=c11 -Wall -Wextra -Os `pkg-config --cflags glfw3 glu` `pkg-config --static --libs glfw3` `pkg-config --libs glu`'
 
 alias vleakshow='valgrind --leak-resolution=high --leak-check=full --show-reachable=yes --show-emwarns=yes --show-mismatched-frees=yes --show-below-main=yes --track-origins=yes -v'
+alias suvleakshow='sudo valgrind --leak-resolution=high --leak-check=full --show-reachable=yes --show-emwarns=yes --show-mismatched-frees=yes --show-below-main=yes --track-origins=yes -v'
 
 alias psync='sudo pacman -Sy'
 alias pud='sudo pacman -Syu'
@@ -122,12 +123,12 @@ alias grmv='git remote mv'
 alias grad='git remote add origin'
 
 # opam configuration
-test -r /home/*/.opam/opam-init/init.zsh && . /home/*/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+test -r /home/alozo/.opam/opam-init/init.zsh && . /home/alozo/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # Golang
-export GOROOT=/home/*/go
-export GOPATH=/home/*/gopath
-PATH='/home/*/go/bin':"$PATH"; export PATH
+export GOROOT=/home/alozo/go
+export GOPATH=/home/alozo/gopath
+PATH='/home/alozo/go/bin':"$PATH"; export PATH
 
 # Rust
-PATH='/home/*/.cargo/bin':"$PATH"; export PATH
+PATH='/home/alozo/.cargo/bin':"$PATH"; export PATH
